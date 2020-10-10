@@ -1,0 +1,21 @@
+div {
+    margin: 5px; 
+}
+.Hookscounter {
+    background: darkcyan;
+}
+
+.Counter {
+    background: darkgoldenrod;
+}
+.HookscounterObject {
+    background: darkgrey;
+}
+.HookscounterArray {
+    background: darkseagreen;
+}
+.HookscounterArray ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
