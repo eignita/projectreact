@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
+import { ButtonGroup, Button } from 'react-bootstrap';
 import './Style.css';
 
 function Hookscounter() {
-    const [count, setCount] = useState(0);
+    const initialcount = 0;
+    const [count, setCount] = useState(initialcount);
     const increment = () => { 
         setCount(count => count+1);
     }
@@ -17,8 +19,11 @@ function Hookscounter() {
         <div className="Hookscounter">
             <h3>Hookscounter - UseState</h3>
             <p>You have clicked {count} times</p>
-            <button onClick={increment}>Increment</button>
-            <button onClick={incrementFive}>IncrementFive</button>
+            <ButtonGroup>
+                <Button variant="primary" onClick={() => setCount(initialcount)}>Reset</Button>{' '}
+                <Button variant="secondary" onClick={increment}>Increment</Button>{' '}
+                <Button variant="primary" onClick={incrementFive}>IncrementFive</Button>{' '}
+            </ButtonGroup>
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Button from 'react-bootstrap/Button';
 import "./Style.css";
 
 class Counter extends Component {
@@ -43,9 +44,9 @@ class Counter extends Component {
       <div className="Counter">
         <h3>Counter - from class, setState is asynchronous, so use callback. Also use prev state as in incrementFive.</h3>
         <p>You have clicked {this.state.count} times</p>
-        <button onClick={this.increment}>Increment</button>
-        <button onClick={() => this.setState({ count: this.state.count - 1 })}>Decrement</button>
-        <button onClick={() => this.incrementFive()}>IncrementFive</button>
+        <Button variant="primary" onClick={this.increment}>Increment</Button>{' '}
+        <Button variant="primary" onClick={() => this.setState({ count: this.state.count - 1 })}>Decrement</Button>{' '}
+        <Button variant="primary" onClick={() => this.incrementFive()}>IncrementFive</Button>{' '}
       </div>
     );
   }

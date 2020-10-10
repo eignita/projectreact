@@ -1,20 +1,17 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Counter from './components/Counter';
-import Hookscounter from './components/Hookscounter';
-import HookscounterArray from './components/HookscounterArray';
-import HookscounterObject from './components/HookscounterObject';
+import { Container, Row } from "react-bootstrap";
+import Hookinterval from './components/Hookinterval';
 
 function App() {
-
-  return (
-    <div className="App">
-      <Counter />
-      <Hookscounter />
-      <HookscounterObject />
-      <HookscounterArray />
-    </div>
-  );
+    return (
+        <Container>
+            <Row>
+                <Hookinterval />                 
+            </Row>            
+        </Container>
+    )
 }
 
-export default App;
+export default App

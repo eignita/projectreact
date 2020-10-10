@@ -1,22 +1,29 @@
 import React, { useState } from "react";
+import { Button, ListGroup } from "react-bootstrap";
 
 function HookscounterArray() {
   const [items, setItems] = useState([]);
   const additem = () => {
-      setItems([...items, {
-          id: items.length,
-          value: Math.floor(Math.random() * 10) + 1
-      }])
-  }
+    setItems([
+      ...items,
+      {
+        id: items.length,
+        value: Math.floor(Math.random() * 10) + 1,
+      },
+    ]);
+  };
 
   return (
-    <div className="HookscounterArray">
-    <button onClick={additem}>Add an item</button>
-      <ul>
+    <div>
+      <h3>useState - array</h3>
+      <Button variant="primary" onClick={additem}>
+        Add an item
+      </Button>{" "}
+      <ListGroup variant="flush">
         {items.map((item) => (
-          <li key={item.id}> {item.value} </li>
+          <ListGroup.Item key={item.id}>{item.value}</ListGroup.Item>
         ))}
-      </ul>
+      </ListGroup>
     </div>
   );
 }
