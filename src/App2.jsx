@@ -2,20 +2,27 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { Container, Row, Col } from "react-bootstrap";
-import FetchData from './reducers/FetchData';
-import FetchDatauseReducer from "./reducers/FetchDatauseReducer";
+import CounterOne from "./reducers/CounterOne";
+import CounterTwo from "./reducers/CounterTwo";
+import CounterThree from "./reducers/CounterThree";
 
+export const NameContext = React.createContext();
 function App() {
   return (
     <Container>
       <Row>
         <Col>
-            <FetchData />
+          <CounterOne />
         </Col>
       </Row>
       <Row>
         <Col>
-            <FetchDatauseReducer />
+          <CounterTwo />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <CounterThree />
         </Col>
       </Row>
     </Container>

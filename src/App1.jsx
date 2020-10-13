@@ -2,20 +2,23 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { Container, Row, Col } from "react-bootstrap";
-import FetchData from './reducers/FetchData';
-import FetchDatauseReducer from "./reducers/FetchDatauseReducer";
+import Hookinterval from "./components/Hookinterval";
+import DataFetching from "./components/DataFetching";
 
+export const NameContext = React.createContext();
 function App() {
   return (
     <Container>
       <Row>
         <Col>
-            <FetchData />
+          <DataFetching />
         </Col>
       </Row>
       <Row>
         <Col>
-            <FetchDatauseReducer />
+          <NameContext.Provider value={"dravit"}>
+            <Hookinterval />
+          </NameContext.Provider>
         </Col>
       </Row>
     </Container>
