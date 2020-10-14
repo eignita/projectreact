@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 
-function Mousecontainer() {
+function HookToggleDisplay() {
   const [display, setDisplay] = useState(true);
   const [btncolor, setBtncolor] = useState('success');
 
   useEffect(()=>{
-      if(display === true) {
-          setBtncolor("success");
-      }
-      else {
-          setBtncolor("danger");
-      }
+      setBtncolor(display === true ? "success" : "danger");
   },[display])
 
   return (
@@ -23,4 +18,4 @@ function Mousecontainer() {
   );
 }
 
-export default Mousecontainer;
+export default HookToggleDisplay;

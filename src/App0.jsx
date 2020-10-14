@@ -8,7 +8,7 @@ import Hookscounter from "./components/Hookscounter";
 import HookscounterArray from "./components/HookscounterArray";
 import HookscounterObject from "./components/HookscounterObject";
 // import Hookmouse from "./components/Hookmouse";
-import Mousecontainer from "./components/Mousecontainer";
+import HookToggleDisplay from "./components/HookToggleDisplay";
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
         {/* <Hookmouse /> */}
       </Row>
       <Row>
-        <Mousecontainer />
+        <HookToggleDisplay />
       </Row>
     </Container>
   );
