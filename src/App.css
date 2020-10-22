@@ -8,3 +8,19 @@
   flex-direction: column;
   justify-content: space-between; 
 }
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: rgb(73, 79, 82);
+  color: white; 
+  width: 100%; 
+}
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+}
