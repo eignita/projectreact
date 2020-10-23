@@ -1,0 +1,11 @@
+version: '3'
+services: 
+    web:  
+        stdin_open: true    #docker run -i
+        tty: true           #docker run -t
+        ports: 
+            - "3000:3000"
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: web
