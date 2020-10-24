@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Badge, Image } from "react-bootstrap";
+import { Card, Badge } from "react-bootstrap";
 
 function ItemDetails({ match }) {
   const [item, setItemDetail] = useState({
