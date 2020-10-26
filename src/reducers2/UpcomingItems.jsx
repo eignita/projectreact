@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import {axios} from "axios";
 import { Card, Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -21,7 +21,6 @@ function UpcomingItems() {
         setItems(res.data.data);
       })
       .catch((err) => console.log(err));
-    return () => {console.log("clean up resources.")};
   }, []);
 
   return (
