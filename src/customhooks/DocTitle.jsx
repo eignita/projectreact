@@ -6,9 +6,9 @@ const [count, setcount] = useState(0);
 useDocTitle(count);
 
     return (
-        <div><h3>Use custom hook</h3>
+        <><h3>Use custom hook</h3>
             <button onClick={()=>setcount(count+1)} >Count {count}</button>
-        </div>
+        </>
     )
 }
 
