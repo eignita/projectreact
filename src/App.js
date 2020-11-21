@@ -6,7 +6,7 @@ import HoverCounter from "./HocHook/HoverCounter";
 function App() {
   return (
     <div className="center">
-      <ClickCounter />
+      <ClickCounter name='dravit' />
       <HoverCounter />
     </div>
   );
